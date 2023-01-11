@@ -1,8 +1,15 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-const InputContainer = styled.div`
+const InputContainer = styled.section`
   background-color: aqua;
+  width: 90%;
+  height: 7%;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 `;
 
 const TodoInput = ({ todoList, setTodoList }) => {

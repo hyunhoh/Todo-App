@@ -1,11 +1,30 @@
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faCheck,
+  faXmark,
+  faMinus,
+  faPenToSquare,
+} from '@fortawesome/free-solid-svg-icons';
 
 const ItemContainer = styled.li`
   background-color: burlywood;
-  width: 100%;
+  width: 90%;
+  height: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 20px;
+  margin: 5px 0 5px 0;
+  font-size: 1.5rem;
+  padding: 0 10px 0 10px;
+
+  > span {
+    margin: 10px;
+  }
+  > .content {
+    flex-grow: 1;
+  }
 `;
 
 const TodoItem = ({ todoItem, handleRemove, handleChecked }) => {
@@ -14,10 +33,20 @@ const TodoItem = ({ todoItem, handleRemove, handleChecked }) => {
   return (
     <>
       <ItemContainer>
-        <span onClick={() => handleChecked(id)}>{isChecked ? 'o' : 'x'}</span>
-        <span>{content}</span>
-        <span>{id}</span>
-        <span onClick={() => handleRemove(id)}>x</span>
+        <span className="check" onClick={() => handleChecked(id)}>
+          {isChecked ? (
+            <FontAwesomeIcon icon={faCheck} />
+          ) : (
+            <FontAwesomeIcon icon={faXmark} />
+          )}
+        </span>
+        <span className="content">{content}</span>
+        <span className="edit">
+          <FontAwesomeIcon icon={faPenToSquare}></FontAwesomeIcon>
+        </span>
+        <span className="remove" onClick={() => handleRemove(id)}>
+          <FontAwesomeIcon icon={faMinus}></FontAwesomeIcon>
+        </span>
       </ItemContainer>
     </>
   );
