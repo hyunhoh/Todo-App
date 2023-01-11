@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const HeaderContainer = styled.header`
   background-color: aliceblue;
@@ -15,12 +15,12 @@ const Header = () => {
       <HeaderContainer>
         <span>Todo App</span>
         <nav>
-          <Link to="/">
+          <NavLink to="/">
             <span>Home</span>
-          </Link>
-          <Link to="/todo">
+          </NavLink>
+          <NavLink to="/todo">
             <span>Todo</span>
-          </Link>
+          </NavLink>
         </nav>
       </HeaderContainer>
     </>
