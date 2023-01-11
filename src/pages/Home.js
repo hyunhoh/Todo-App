@@ -3,7 +3,7 @@ import TodoReport from '../components/TodoReport';
 import TodoView from '../components/TodoView';
 
 const HomeMain = styled.main`
-  background-color: #f3f3f3;
+  background-color: #333333;
   width: 100%;
   height: 90%;
   display: flex;
@@ -15,7 +15,7 @@ const HomeMain = styled.main`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: brown;
+    background-color: #f5f5f5;
     width: 60%;
     height: 80%;
     border-radius: 50px;
@@ -23,11 +23,15 @@ const HomeMain = styled.main`
 `;
 
 const Home = ({ todoList, setTodoList }) => {
+  const checkedRate = Math.round(
+    (todoList.filter(ele => ele.isChecked).length / todoList.length) * 100,
+  );
+
   return (
     <>
       <HomeMain>
         <article>
-          <TodoReport todoList={todoList}></TodoReport>
+          <TodoReport checkedRate={checkedRate}></TodoReport>
           <TodoView todoList={todoList} setTodoList={setTodoList}></TodoView>
         </article>
       </HomeMain>

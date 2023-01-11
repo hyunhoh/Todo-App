@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import TodoViewItem from './TodoViewItem';
 
 const ViewContainer = styled.section`
-  background-color: blueviolet;
+  background-color: transparent;
   width: 80%;
   height: 60%;
   border-radius: 50px;

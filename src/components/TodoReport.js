@@ -1,28 +1,28 @@
 import styled from 'styled-components';
 
 const ReportContainer = styled.section`
-  background-color: aquamarine;
+  background-color: transparent;
   width: 80%;
-  height: 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 5%;
   border-radius: 50px;
   margin-bottom: 10px;
+  border: 2px;
+  border-style: solid;
 `;
 
-const TodoReport = ({ todoList }) => {
-  const checkedRate = Math.round(
-    (todoList.filter(ele => ele.isChecked).length / todoList.length) * 100,
-  );
+const ProgressBar = styled.div`
+  background-color: darkgray;
+  height: 100%;
+  width: ${props => props.checkedRate}%;
+  border-radius: 50px;
+  transition: 0.5s;
+`;
 
+const TodoReport = ({ checkedRate }) => {
   return (
     <ReportContainer>
-      {Number.isNaN(checkedRate) ? (
-        <span>No Todo</span>
-      ) : (
-        <span>{`${checkedRate}%`}</span>
-      )}
+      {/* {Number.isNaN(checkedRate) ? `Empty task` : `${checkedRate}%`} */}
+      <ProgressBar checkedRate={checkedRate}></ProgressBar>
     </ReportContainer>
   );
 };
