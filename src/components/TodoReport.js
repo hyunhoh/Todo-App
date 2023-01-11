@@ -11,7 +11,11 @@ const TodoReport = ({ todoList }) => {
 
   return (
     <ReportContainer>
-      <span>{`${checkedRate}%`}</span>
+      {Number.isNaN(checkedRate) ? (
+        <span>No Todo</span>
+      ) : (
+        <span>{`${checkedRate}%`}</span>
+      )}
     </ReportContainer>
   );
 };
