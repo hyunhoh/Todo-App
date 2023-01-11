@@ -24,6 +24,13 @@ const ItemContainer = styled.li`
   > span {
     margin: 10px;
   }
+
+  > .check,
+  .edit,
+  .remove:hover {
+    cursor: pointer;
+  }
+
   > .content {
     flex-grow: 1;
   }

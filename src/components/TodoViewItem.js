@@ -15,6 +15,7 @@ const ViewItemContainer = styled.div`
 
   :hover {
     box-shadow: 3px 3px 4px #333333;
+    cursor: pointer;
   }
 `;
 
