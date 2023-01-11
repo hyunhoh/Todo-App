@@ -9,6 +9,11 @@ const ReportContainer = styled.section`
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
+  font-size: 1.2rem;
+
+  > span {
+    margin-top: 5px;
+  }
 `;
 
 const ProgressContainer = styled.div`
@@ -34,7 +39,7 @@ const TodoReport = ({ checkedRate, checkedList, todoList }) => {
       <ProgressContainer>
         <ProgressBar checkedRate={checkedRate}></ProgressBar>
       </ProgressContainer>
-      <span>{`- ${checkedRate}% ${checkedList.length} / ${todoList.length} -`}</span>
+      <span>{`< ${checkedRate}% ${checkedList.length} / ${todoList.length} >`}</span>
     </ReportContainer>
   );
 };
