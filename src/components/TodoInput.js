@@ -2,7 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 
 const InputContainer = styled.section`
-  background-color: aqua;
+  background-color: transparent;
   width: 90%;
   height: 7%;
   border-radius: 50px;
@@ -10,6 +10,20 @@ const InputContainer = styled.section`
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+
+  :focus-within {
+    border: 2px;
+    border-style: solid;
+  }
+
+  > input {
+    width: 90%;
+    height: 90%;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+  }
 `;
 
 const TodoInput = ({ todoList, setTodoList }) => {
@@ -38,6 +52,7 @@ const TodoInput = ({ todoList, setTodoList }) => {
         <input
           type="text"
           value={inputValue}
+          placeholder="Add a task"
           onChange={handleInputValue}
           onKeyUp={e =>
             e.key === 'Enter' && inputValue !== '' ? handleRegister() : null

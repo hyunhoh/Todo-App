@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import TodoItem from '../components/TodoItem';
 
 const ListContainer = styled.ul`
-  background-color: beige;
+  background-color: transparent;
   width: 90%;
   height: 80%;
   border-radius: 20px;
-  margin-top: 30px;
+  margin-top: 15px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

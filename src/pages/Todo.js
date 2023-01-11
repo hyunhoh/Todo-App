@@ -3,7 +3,7 @@ import TodoInput from '../components/TodoInput';
 import TodoList from '../components/TodoList';
 
 const TodoMain = styled.main`
-  background-color: #f3f3f3;
+  background-color: #333333;
   width: 100%;
   height: 90%;
   display: flex;
@@ -11,7 +11,7 @@ const TodoMain = styled.main`
   align-items: center;
 
   > article {
-    background-color: blanchedalmond;
+    background-color: #f5f5f5;
     width: 60%;
     height: 90%;
     display: flex;

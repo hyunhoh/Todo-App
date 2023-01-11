@@ -8,7 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 const ItemContainer = styled.li`
-  background-color: burlywood;
+  background-color: transparent;
   width: 90%;
   height: 3rem;
   display: flex;
@@ -18,6 +18,8 @@ const ItemContainer = styled.li`
   margin: 5px 0 5px 0;
   font-size: 1.5rem;
   padding: 0 10px 0 10px;
+  border: 2px;
+  border-style: solid;
 
   > span {
     margin: 10px;
