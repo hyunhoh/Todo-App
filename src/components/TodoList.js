@@ -11,6 +11,16 @@ const TodoList = ({ todoList, setTodoList }) => {
     setTodoList(todoList.filter(ele => ele.id !== id));
   };
 
+  const handleChecked = id => {
+    const selectedItem = todoList.filter(ele => ele.id === id)[0];
+    const restItems = todoList.filter(ele => ele.id !== id);
+    selectedItem.isChecked = !selectedItem.isChecked;
+
+    selectedItem.isChecked
+      ? setTodoList([...restItems, selectedItem])
+      : setTodoList([selectedItem, ...restItems]);
+  };
+
   return (
     <>
       <ListContainer>
@@ -18,7 +28,8 @@ const TodoList = ({ todoList, setTodoList }) => {
           <TodoItem
             key={ele.id}
             todoItem={ele}
-            handleRemove={handleRemove}></TodoItem>
+            handleRemove={handleRemove}
+            handleChecked={handleChecked}></TodoItem>
         ))}
       </ListContainer>
     </>

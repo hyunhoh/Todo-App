@@ -8,13 +8,13 @@ const ItemContainer = styled.li`
   align-items: center;
 `;
 
-const TodoItem = ({ todoItem, handleRemove }) => {
+const TodoItem = ({ todoItem, handleRemove, handleChecked }) => {
   const { id, content, isChecked } = todoItem;
 
   return (
     <>
       <ItemContainer>
-        <span>{isChecked ? 'o' : 'x'}</span>
+        <span onClick={() => handleChecked(id)}>{isChecked ? 'o' : 'x'}</span>
         <span>{content}</span>
         <span>{id}</span>
         <span onClick={() => handleRemove(id)}>x</span>

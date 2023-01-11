@@ -22,6 +22,7 @@ const TodoInput = ({ todoList, setTodoList }) => {
 
   const handleRegister = () => {
     setTodoList([createTodoItem(inputValue), ...todoList]);
+    setInputValue('');
   };
 
   return (
@@ -29,8 +30,11 @@ const TodoInput = ({ todoList, setTodoList }) => {
       <InputContainer>
         <input
           type="text"
+          value={inputValue}
           onChange={handleInputValue}
-          onKeyUp={e => (e.key === 'Enter' ? handleRegister() : null)}></input>
+          onKeyUp={e =>
+            e.key === 'Enter' && inputValue !== '' ? handleRegister() : null
+          }></input>
       </InputContainer>
     </>
   );
