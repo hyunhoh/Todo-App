@@ -5,14 +5,27 @@ const ViewContainer = styled.section`
   background-color: blueviolet;
 `;
 
-const TodoView = ({ todoList }) => {
-  const OverViewList = todoList.filter(ele => !ele.isChecked).slice(0, 4);
+const TodoView = ({ todoList, setTodoList }) => {
+  const overViewList = todoList.filter(ele => !ele.isChecked).slice(0, 4);
+
+  const handleChecked = id => {
+    const selectedItem = todoList.filter(ele => ele.id === id)[0];
+    const restItems = todoList.filter(ele => ele.id !== id);
+    selectedItem.isChecked = !selectedItem.isChecked;
+
+    selectedItem.isChecked
+      ? setTodoList([...restItems, selectedItem])
+      : setTodoList([selectedItem, ...restItems]);
+  };
 
   return (
     <>
       <ViewContainer>
-        {OverViewList.map(ele => (
-          <TodoViewItem key={ele.id} todoViewItem={ele}></TodoViewItem>
+        {overViewList.map(ele => (
+          <TodoViewItem
+            key={ele.id}
+            todoViewItem={ele}
+            handleChecked={handleChecked}></TodoViewItem>
         ))}
       </ViewContainer>
     </>

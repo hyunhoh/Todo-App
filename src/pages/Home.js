@@ -11,12 +11,12 @@ const HomeMain = styled.main`
   align-items: center;
 `;
 
-const Home = ({ todoList }) => {
+const Home = ({ todoList, setTodoList }) => {
   return (
     <>
       <HomeMain>
         <TodoReport todoList={todoList}></TodoReport>
-        <TodoView todoList={todoList}></TodoView>
+        <TodoView todoList={todoList} setTodoList={setTodoList}></TodoView>
       </HomeMain>
     </>
   );

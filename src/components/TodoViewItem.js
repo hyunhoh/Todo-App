@@ -4,11 +4,14 @@ const ViewItemContainer = styled.div`
   background-color: cadetblue;
 `;
 
-const TodoViewItem = ({ todoViewItem }) => {
+const TodoViewItem = ({ todoViewItem, handleChecked }) => {
+  const { id, content } = todoViewItem;
+
   return (
     <>
       <ViewItemContainer>
-        <span>{todoViewItem.content}</span>
+        <span>{content}</span>
+        <span onClick={() => handleChecked(id)}>x</span>
       </ViewItemContainer>
     </>
   );

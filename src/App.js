@@ -12,7 +12,11 @@ const App = () => {
     <>
       <Header></Header>
       <Routes>
-        <Route path="/" element={<Home todoList={todoList}></Home>}></Route>
+        <Route
+          path="/"
+          element={
+            <Home todoList={todoList} setTodoList={setTodoList}></Home>
+          }></Route>
         <Route
           path="/todo"
           element={
