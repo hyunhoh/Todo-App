@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const HeaderContainer = styled.header`
   background-color: aliceblue;
+  width: 100%;
   height: 10%;
   display: flex;
   justify-content: space-between;

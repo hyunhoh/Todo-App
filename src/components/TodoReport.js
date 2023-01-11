@@ -2,6 +2,13 @@ import styled from 'styled-components';
 
 const ReportContainer = styled.section`
   background-color: aquamarine;
+  width: 80%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  margin-bottom: 10px;
 `;
 
 const TodoReport = ({ todoList }) => {

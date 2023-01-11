@@ -5,18 +5,31 @@ import TodoView from '../components/TodoView';
 const HomeMain = styled.main`
   background-color: #f3f3f3;
   width: 100%;
-  height: 100%;
+  height: 90%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+
+  > article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: brown;
+    width: 60%;
+    height: 80%;
+    border-radius: 50px;
+  }
 `;
 
 const Home = ({ todoList, setTodoList }) => {
   return (
     <>
       <HomeMain>
-        <TodoReport todoList={todoList}></TodoReport>
-        <TodoView todoList={todoList} setTodoList={setTodoList}></TodoView>
+        <article>
+          <TodoReport todoList={todoList}></TodoReport>
+          <TodoView todoList={todoList} setTodoList={setTodoList}></TodoView>
+        </article>
       </HomeMain>
     </>
   );

@@ -3,6 +3,14 @@ import TodoViewItem from './TodoViewItem';
 
 const ViewContainer = styled.section`
   background-color: blueviolet;
+  width: 80%;
+  height: 60%;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
 `;
 
 const TodoView = ({ todoList, setTodoList }) => {
