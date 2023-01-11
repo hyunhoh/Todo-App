@@ -23,15 +23,17 @@ const HomeMain = styled.main`
 `;
 
 const Home = ({ todoList, setTodoList }) => {
-  const checkedRate = Math.round(
-    (todoList.filter(ele => ele.isChecked).length / todoList.length) * 100,
-  );
+  const checkedList = todoList.filter(ele => ele.isChecked);
+  const checkedRate = Math.round((checkedList.length / todoList.length) * 100);
 
   return (
     <>
       <HomeMain>
         <article>
-          <TodoReport checkedRate={checkedRate}></TodoReport>
+          <TodoReport
+            checkedRate={checkedRate}
+            checkedList={checkedList}
+            todoList={todoList}></TodoReport>
           <TodoView todoList={todoList} setTodoList={setTodoList}></TodoView>
         </article>
       </HomeMain>
