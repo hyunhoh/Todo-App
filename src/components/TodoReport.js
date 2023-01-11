@@ -11,7 +11,7 @@ const ReportContainer = styled.section`
 `;
 
 const ProgressBar = styled.div`
-  background-color: darkgray;
+  background-color: red;
   height: 100%;
   width: ${props => props.checkedRate}%;
   border-radius: 50px;
