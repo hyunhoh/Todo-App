@@ -35,16 +35,20 @@ const ProgressBar = styled.div`
 
 const TodoReport = ({ checkedRate, checkedList, todoList }) => {
   return (
-    <ReportContainer>
-      <ProgressContainer>
-        <ProgressBar checkedRate={checkedRate}></ProgressBar>
-      </ProgressContainer>
-      <span>
-        {Number.isNaN(checkedRate)
-          ? `No task`
-          : `< ${checkedRate}% ${checkedList.length} / ${todoList.length} >`}
-      </span>
-    </ReportContainer>
+    <>
+      <ReportContainer>
+        {Number.isNaN(checkedRate) ? (
+          'No task'
+        ) : (
+          <>
+            <ProgressContainer>
+              <ProgressBar checkedRate={checkedRate}></ProgressBar>
+            </ProgressContainer>
+            <span>{`${checkedRate}% ${checkedList.length} / ${todoList.length}`}</span>
+          </>
+        )}
+      </ReportContainer>
+    </>
   );
 };
 
