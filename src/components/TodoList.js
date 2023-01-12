@@ -5,7 +5,6 @@ const ListContainer = styled.ul`
   background-color: transparent;
   width: 90%;
   height: 80%;
-  border-radius: 20px;
   margin-top: 15px;
   display: flex;
   flex-direction: column;

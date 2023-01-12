@@ -5,7 +5,6 @@ const ViewContainer = styled.section`
   background-color: transparent;
   width: 80%;
   height: 60%;
-  border-radius: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
