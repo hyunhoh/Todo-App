@@ -52,7 +52,7 @@ const TodoInput = ({ todoList, setTodoList }) => {
         <input
           type="text"
           value={inputValue}
-          placeholder="Add a task"
+          placeholder="Add a new task"
           onChange={handleInputValue}
           onKeyUp={e =>
             e.key === 'Enter' && inputValue !== '' ? handleRegister() : null
