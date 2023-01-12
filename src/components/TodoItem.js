@@ -31,6 +31,14 @@ const ItemContainer = styled.li`
     cursor: pointer;
   }
 
+  .faCheck {
+    color: lightgreen;
+  }
+
+  .faXmark {
+    color: red;
+  }
+
   > .content {
     flex-grow: 1;
   }
@@ -44,9 +52,9 @@ const TodoItem = ({ todoItem, handleRemove, handleChecked }) => {
       <ItemContainer>
         <span className="check" onClick={() => handleChecked(id)}>
           {isChecked ? (
-            <FontAwesomeIcon icon={faCheck} />
+            <FontAwesomeIcon icon={faCheck} className="faCheck" />
           ) : (
-            <FontAwesomeIcon icon={faXmark} />
+            <FontAwesomeIcon icon={faXmark} className="faXmark" />
           )}
         </span>
         <span className="content">{content}</span>
