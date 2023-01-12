@@ -39,7 +39,11 @@ const TodoReport = ({ checkedRate, checkedList, todoList }) => {
       <ProgressContainer>
         <ProgressBar checkedRate={checkedRate}></ProgressBar>
       </ProgressContainer>
-      <span>{`< ${checkedRate}% ${checkedList.length} / ${todoList.length} >`}</span>
+      <span>
+        {Number.isNaN(checkedRate)
+          ? `No task`
+          : `< ${checkedRate}% ${checkedList.length} / ${todoList.length} >`}
+      </span>
     </ReportContainer>
   );
 };

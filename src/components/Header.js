@@ -8,6 +8,17 @@ const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.5rem;
+
+  > span,
+  nav {
+    margin: 2rem;
+  }
+
+  a {
+    text-decoration: none;
+    margin: 0.5rem;
+  }
 `;
 
 const Header = () => {
