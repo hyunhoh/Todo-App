@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const ViewItemContainer = styled.div`
-  background-color: transparent;
+  background-color: aliceblue;
   width: 45%;
   height: 35%;
   border-radius: 20px;
@@ -9,7 +9,7 @@ const ViewItemContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border: 2px;
   border-style: solid;
 

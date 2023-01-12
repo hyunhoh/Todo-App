@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 const HeaderContainer = styled.header`
-  background-color: aliceblue;
+  background-color: lightgray;
   width: 100%;
   height: 10%;
   display: flex;
