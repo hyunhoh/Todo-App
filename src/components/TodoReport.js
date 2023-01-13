@@ -8,7 +8,7 @@ const ReportContainer = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+  margin-top: 10px;
   font-size: 1.2rem;
 
   > span {

@@ -30,11 +30,11 @@ const Home = ({ todoList, setTodoList }) => {
     <>
       <HomeMain>
         <article>
+          <TodoView todoList={todoList} setTodoList={setTodoList}></TodoView>
           <TodoReport
             checkedRate={checkedRate}
             checkedList={checkedList}
             todoList={todoList}></TodoReport>
-          <TodoView todoList={todoList} setTodoList={setTodoList}></TodoView>
         </article>
       </HomeMain>
     </>

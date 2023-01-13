@@ -9,7 +9,7 @@ const ViewContainer = styled.section`
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-top: 10px;
+  margin-bottom: 10px;
 `;
 
 const TodoView = ({ todoList, setTodoList }) => {
